@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
+@keyframes typingAnimation {
+  from{opacity: 0}
+  to{opacity: 1;}
+}
+
+@keyframes linuxAnimation {
+  from{transform: translateY(-5px)}
+  to{transform: translateY(5px)}
+}
+
+@keyframes windowsAnimation {
+  from{transform: translate(-50%, 5px)}
+  to{transform: translate(-50%, -5px)}
+}
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
+}
+
+.notVisible{
+  opacity: 0;
+  transform: scale(0.5);
 }
 
 header {
@@ -19,7 +39,7 @@ header {
 }
 
 header .text {
-  max-width: 1000px;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -28,11 +48,25 @@ header .text {
 header .text .title {
   font-weight: 700;
   color: #4E2DD2;
-  font-size: 6.5vmin;
+  font-size: 6vmin;
+}
+
+header .text .title p {
+  position: relative;
+}
+
+header .text .title p span {
+  background-color: #4e2dd296;
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  margin-left: 2px;
+  content: '';
 }
 
 header .text .description {
   font-size: 5vmin;
+  transition: transform 2s, opacity 2s;
 }
 
 header .images-container {
@@ -43,6 +77,7 @@ header .images-container {
   max-width: 200px;
   max-height: 200px;
   position: relative;
+  transition: transform 2s, opacity 2s;
 }
 
 header .images-container .mainphoto {
@@ -63,17 +98,20 @@ header .images-container .smallimg {
 .linux {
   left: -15px;
   bottom: 25px;
+  animation: linuxAnimation 1.5s alternate infinite;
 }
 
 .microsoft {
-  bottom: -30px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
+  animation: windowsAnimation 1.5s alternate infinite;
 }
 
 .azure{
   right: -15px;
   bottom: 25px;
+  animation: linuxAnimation 1.5s alternate infinite;
 }
 
 button {
@@ -90,7 +128,7 @@ button {
   }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 450px) {
   header .text .title {
     font-size: 22px;
   }
@@ -99,4 +137,15 @@ button {
   }
 }
 
+@media (min-width: 600px) {
+  header .text .title {
+    font-size: 40px;
+  }
+}
 
+@media (min-width: 890px) {
+  header {
+    flex-direction: row;
+    column-gap: 10%;
+  }
+}
