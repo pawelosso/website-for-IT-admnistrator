@@ -36,7 +36,7 @@ startTypingFirstLine()
     document.querySelector('header .text .title .firstLine span').style.opacity = '0';
     startTypingSecondLine()
       .then(()=> {
-        document.querySelector('header .text .title .secondLine span').style.animation = 'typingAnimation .7s alternate infinite'
+        document.querySelector('header .text .title .secondLine span').style.animation = 'typingAnimation .6s alternate infinite'
         document.querySelectorAll('.notVisible').forEach(item => item.classList.remove('notVisible'))
       })
   })
