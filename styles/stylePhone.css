@@ -33,29 +33,38 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 10%;
+  row-gap: 15vh;
   min-height: 500px;
   justify-content: center;
 }
 
-header .text {
+header .content-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10%;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+header .content-container .text {
   max-width: 540px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 
-header .text .title {
+header .content-container .text .title {
   font-weight: 700;
   color: #4E2DD2;
   font-size: 6vmin;
 }
 
-header .text .title p {
+header .content-container .text .title p {
   position: relative;
 }
 
-header .text .title p span {
+header .content-container .text .title p span {
   background-color: #4e2dd296;
   width: 4px;
   height: 100%;
@@ -64,12 +73,12 @@ header .text .title p span {
   content: '';
 }
 
-header .text .description {
+header .content-container .text .description {
   font-size: 5vmin;
   transition: transform 2s, opacity 2s;
 }
 
-header .images-container {
+header .content-container .images-container {
   width: 50vmin;
   height: 50vmin;
   background-color: grey;
@@ -80,14 +89,14 @@ header .images-container {
   transition: transform 2s, opacity 2s;
 }
 
-header .images-container .mainphoto {
+header .content-container .images-container .mainphoto {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-header .images-container .smallimg {
+header .content-container .images-container .smallimg {
   position: absolute;
   z-index: 2;
   width: 13vmin;
@@ -129,23 +138,60 @@ button {
 }
 
 @media (min-width: 450px) {
-  header .text .title {
+  header .content-container .text .title {
     font-size: 22px;
   }
-  header .text .description {
+  header .content-container .text .description {
     font-size: 17px;
   }
 }
 
 @media (min-width: 600px) {
-  header .text .title {
+  header .content-container .text .title {
     font-size: 40px;
   }
 }
 
 @media (min-width: 890px) {
-  header {
+  header .content-container {
     flex-direction: row;
     column-gap: 10%;
   }
+}
+
+@media (min-width: 1200px) {
+  header .content-container .text {
+    max-width: 640px;
+  }
+
+  header .content-container .text .title {
+    font-size: 48px;
+  }
+
+  header .content-container .text .description {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1700px) {
+  header .content-container .text {
+    max-width: 800px;
+  }
+
+  header .content-container .text .title {
+    font-size: 60px;
+  }
+
+  header .content-container .text .description {
+    padding-right: 20px;
+  }
+
+  header .content-container .images-container {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  header .content-container .images-container .smallimg {
+    max-width: 75px;
+}
 }
