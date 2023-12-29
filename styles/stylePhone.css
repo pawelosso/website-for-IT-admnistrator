@@ -40,6 +40,14 @@
   transform: scale(0.5);
 }
 
+.blur {
+  filter: blur(6px);
+}
+
+.blurWhenMessegeActive{
+  transition: filter .7s;
+}
+
 header {
   height: 95vh;
   padding: 20px;
@@ -162,6 +170,60 @@ header .content-container .images-container .smallimg {
   color: #4e2dd2;
 }
 
+.messageInfo-container {
+  position: fixed;
+  background-color: grey;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.messageInfo-container .messageInfo {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 18px;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.messageInfo-container .messageInfo p {
+  background-color: #4E2DD2;
+  color: white;
+  padding: 10px;
+  font-size: 3.5vmin;
+  font-weight: 500;
+}
+
+.messageInfo-container .messageInfo .images {
+  display: flex;
+  column-gap: 70px;
+}
+
+.messageInfo-container .messageInfo .images img {
+  width: 17vmin;
+  max-width: 60px;
+}
+
+.messageInfo-container .messageInfo .images a{
+  text-decoration: none;
+}
+
+.messageInfo-container .messageInfo img{
+  width: 2vmin;
+}
+
 @media (min-width: 350px) {
   
 }
@@ -172,6 +234,10 @@ header .content-container .images-container .smallimg {
   }
   header .content-container .text .description {
     font-size: 17px;
+  }
+
+  .messageInfo-container .messageInfo p{
+    font-size: 16px;
   }
 }
 
