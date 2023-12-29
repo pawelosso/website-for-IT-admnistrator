@@ -41,7 +41,7 @@
 }
 
 header {
-  height: 100vh;
+  height: 95vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -140,18 +140,30 @@ header .content-container .images-container .smallimg {
   transition: transform 2s, opacity 2s;
 }
 
-button {
-  border: none;
-  font-size: 4vmin;
-  padding: 10px 20px;
-  color: white;
-  background-color: #4e2dd2ba;
+.messageButton-container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 20px;
+  height: 40px;
+  z-index: 3;
+}
+
+.messageButton-container .messageButton {
+  font-weight: 500;
+  background: white;
+  padding: 5px 10px;
+  border: 3px solid #4e2dd2;
+  z-index: 3;
+  background-color: white;
+  color: #4e2dd2;
 }
 
 @media (min-width: 350px) {
-  button {
-    font-size: 14px;
-  }
+  
 }
 
 @media (min-width: 450px) {
