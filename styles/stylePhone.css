@@ -41,7 +41,7 @@
 }
 
 .blur {
-  filter: blur(6px);
+  filter: blur(10px);
 }
 
 .blurWhenMessegeActive{
@@ -151,13 +151,14 @@ header .content-container .images-container .smallimg {
 .messageButton-container {
   position: sticky;
   top: 0;
-  right: 0;
+  left: 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding-right: 20px;
-  height: 40px;
+  height: 50px;
   z-index: 3;
+  overflow: hidden;
 }
 
 .messageButton-container .messageButton {
@@ -168,23 +169,34 @@ header .content-container .images-container .smallimg {
   z-index: 3;
   background-color: white;
   color: #4e2dd2;
+  transition: opacity .4s, transform .4s;
+}
+
+.messageButton-container .messageButton.hide {
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .messageInfo-container {
   position: fixed;
-  background-color: grey;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  transition: opacity .2s;
+}
+
+.messageInfo-container.hide{
+  opacity: 0;
 }
 
 .messageInfo-container .messageInfo {
+  position: relative;
   background-color: white;
   display: flex;
   align-items: center;
@@ -194,8 +206,26 @@ header .content-container .images-container .smallimg {
   border-radius: 18px;
   flex-direction: column;
   row-gap: 20px;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 30px;
+  -webkit-box-shadow: 0px 0px 49px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 49px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
+  transition: transform .2s;
+}
+
+.messageInfo.hide {
+  transform: translateY(-50%);
+}
+
+.messageInfo-container .messageInfo .closeButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.messageInfo-container .messageInfo .closeButton img {
+  width: 20px;
 }
 
 .messageInfo-container .messageInfo p {
@@ -224,9 +254,6 @@ header .content-container .images-container .smallimg {
   width: 2vmin;
 }
 
-@media (min-width: 350px) {
-  
-}
 
 @media (min-width: 450px) {
   header .content-container .text .title {
@@ -248,9 +275,17 @@ header .content-container .images-container .smallimg {
 }
 
 @media (min-width: 890px) {
+  header {
+    min-height: 400px;
+  }
+  
   header .content-container {
     flex-direction: row;
     column-gap: 10%;
+  }
+
+  .messageInfo-container{
+    align-items: flex-end;
   }
 }
 
