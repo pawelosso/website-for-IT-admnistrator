@@ -55,7 +55,7 @@ header {
   flex-direction: column;
   align-items: center;
   row-gap: 15vh;
-  min-height: 500px;
+  min-height: 600px;
   justify-content: center;
 }
 
@@ -142,10 +142,6 @@ header .content-container .images-container .smallimg {
   right: -15px;
   bottom: 25px;
   animation: linuxAnimation 1.5s alternate infinite;
-}
-
-.moreInfo{
-  transition: transform 2s, opacity 2s;
 }
 
 .messageButton-container {
@@ -254,6 +250,22 @@ header .content-container .images-container .smallimg {
   width: 2vmin;
 }
 
+header .moreInfo {
+  transition: transform 2s, opacity 2s;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  border: 3px solid #4e2dd2;
+  justify-content: center;
+  overflow: hidden;
+}
+
+header .moreInfo img{
+  width: 40px;
+}
+
 
 @media (min-width: 450px) {
   header .content-container .text .title {
@@ -265,6 +277,10 @@ header .content-container .images-container .smallimg {
 
   .messageInfo-container .messageInfo p{
     font-size: 16px;
+  }
+
+  header .moreInfo {
+    margin-top: 60px;
   }
 }
 
@@ -323,5 +339,5 @@ header .content-container .images-container .smallimg {
 
   header .content-container .images-container .smallimg {
     max-width: 75px;
-}
+  }
 }
