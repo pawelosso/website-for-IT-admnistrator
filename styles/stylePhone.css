@@ -166,6 +166,7 @@ header .content-container .images-container .smallimg {
   background-color: white;
   color: #4e2dd2;
   transition: opacity .4s, transform .4s;
+  cursor: pointer;
 }
 
 .messageButton-container .messageButton.hide {
@@ -217,6 +218,7 @@ background-color: white;
   position: absolute;
   right: 20px;
   top: 20px;
+  cursor: pointer;
 }
 
 .messageInfo-container .messageInfo .closeButton img {
@@ -257,8 +259,8 @@ background-color: white;
 
 header .moreInfo {
   transition: transform 2s, opacity 2s;
-  min-width: 60px;
-  min-height: 60px;
+  min-width: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   border-radius: 50%;
@@ -267,8 +269,8 @@ header .moreInfo {
   overflow: hidden;
 }
 
-header .moreInfo img{
-  width: 40px;
+header .moreInfo img {
+  width: 25px;
 }
 
 main{
