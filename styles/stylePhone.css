@@ -169,7 +169,6 @@ header .content-container .images-container .smallimg {
 }
 
 .messageButton-container .messageButton.hide {
-  transform: translateX(100%);
   opacity: 0;
 }
 
@@ -193,18 +192,18 @@ header .content-container .images-container .smallimg {
 
 .messageInfo-container .messageInfo {
   position: relative;
-  background-color: white;
+background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 18px;
   flex-direction: column;
   row-gap: 20px;
   padding-top: 60px;
   padding-bottom: 30px;
-  -webkit-box-shadow: 0px 0px 49px 0px rgba(66, 68, 90, 1);
+-webkit-box-shadow: 0px 0px 49px 0px rgba(66, 68, 90, 1);
   -moz-box-shadow: 0px 0px 49px 0px rgba(66, 68, 90, 1);
   box-shadow: 0px 0px 25px 0px rgba(66, 68, 90, 1);
   transition: transform .2s;
@@ -224,26 +223,32 @@ header .content-container .images-container .smallimg {
   width: 20px;
 }
 
-.messageInfo-container .messageInfo p {
-  background-color: #4E2DD2;
-  color: white;
-  padding: 10px;
+.messageInfo-container .messageInfo .mail {
+  color: black;
+  padding: 5px;
   font-size: 3.5vmin;
-  font-weight: 500;
+  font-weight: 700;
+  border-bottom: 3px solid black;
 }
 
 .messageInfo-container .messageInfo .images {
   display: flex;
   column-gap: 70px;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .messageInfo-container .messageInfo .images img {
   width: 17vmin;
-  max-width: 60px;
+  max-width: 30px;
 }
 
-.messageInfo-container .messageInfo .images a{
+.messageInfo-container .messageInfo .images a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  color: black;
 }
 
 .messageInfo-container .messageInfo img{
@@ -266,6 +271,10 @@ header .moreInfo img{
   width: 40px;
 }
 
+main{
+  min-height: 100vh;
+  background-color: #1E1E1E;
+}
 
 @media (min-width: 450px) {
   header .content-container .text .title {
@@ -275,7 +284,7 @@ header .moreInfo img{
     font-size: 17px;
   }
 
-  .messageInfo-container .messageInfo p{
+  .messageInfo-container .messageInfo .mail{
     font-size: 16px;
   }
 
