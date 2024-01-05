@@ -35,6 +35,10 @@
   font-family: 'Roboto Mono', monospace;
 }
 
+body {
+  overflow: hidden;
+}
+
 .notVisible{
   opacity: 0;
   transform: scale(0.5);
@@ -96,7 +100,6 @@ header .content-container .text .title p span {
 
 header .content-container .text .description {
   font-size: 5vmin;
-  transition: transform 2s, opacity 2s;
 }
 
 header .content-container .images-container {
@@ -107,7 +110,6 @@ header .content-container .images-container {
   max-width: 200px;
   max-height: 200px;
   position: relative;
-  transition: transform 2s, opacity 2s;
 }
 
 header .content-container .images-container .mainphoto {
@@ -158,13 +160,13 @@ header .content-container .images-container .smallimg {
 }
 
 .messageButton-container .messageButton {
-  font-weight: 500;
+  font-weight: 700;
   background: white;
   padding: 5px 10px;
-  border: 3px solid #4e2dd2;
+  border: 3px solid #000000;
   z-index: 3;
   background-color: white;
-  color: #4e2dd2;
+  color: #000000;
   transition: opacity .4s, transform .4s;
   cursor: pointer;
 }
@@ -273,9 +275,50 @@ header .moreInfo img {
   width: 25px;
 }
 
-main{
+main {
   min-height: 100vh;
-  background-color: #1E1E1E;
+  background-color: #E0E0E0;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+main .content-container .text {
+  max-width: 590px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+main .content-container .text .title {
+  font-weight: 700;
+  font-size: 9vmin;
+}
+
+main .content-container .text .content {
+  font-weight: 500;
+}
+
+main .content-container .images {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+main .content-container .images img {
+  width: 75vmin;
+  max-width: 310px;
 }
 
 @media (min-width: 450px) {
@@ -293,11 +336,19 @@ main{
   header .moreInfo {
     margin-top: 60px;
   }
+
+  main .content-container .text .title {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 600px) {
   header .content-container .text .title {
     font-size: 40px;
+  }
+
+  main .content-container .text .title {
+    font-size: 50px;
   }
 }
 
@@ -327,6 +378,10 @@ main{
 
   header .content-container .text .description {
     font-size: 23px;
+  }
+
+  main .content-container .text .title {
+    font-size: 70px;
   }
 }
 

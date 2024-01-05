@@ -1,3 +1,8 @@
+window.scrollTo({
+  left:0,
+  top:0,
+  behavior:'smooth',
+})
 
 const startTypingFirstLine = () => new Promise(resolve => {
   let presentText = '';
@@ -36,8 +41,10 @@ startTypingFirstLine()
     document.querySelector('header .text .title .firstLine span').style.opacity = '0';
     startTypingSecondLine()
       .then(()=> {
-        document.querySelector('header .text .title .secondLine span').style.animation = 'typingAnimation .6s alternate infinite'
-        document.querySelectorAll('.notVisible').forEach(item => item.classList.remove('notVisible'))
+        document.querySelector('header .text .title .secondLine span').style.animation = 'typingAnimation .6s alternate infinite';
+        document.querySelectorAll('.notVisible').forEach(item => item.style.transition = 'transform 2s, opacity 2s');
+        document.querySelectorAll('.notVisible').forEach(item => item.classList.remove('notVisible'));
+        document.querySelector('body').style.overflow = 'auto';
       })
   })
 

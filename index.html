@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Łukasz Aleksandrowicz</title>
-  <script src="scripts/typeAnimation.js" defer></script>
-  <script src="scripts/messegeDialogWindow.js" defer></script>
   <link rel="stylesheet" href="styles/stylePhone.css">
 </head>
 <body>
@@ -29,17 +27,33 @@
       </div>
       <div class="images-container notVisible">
         <img src="images/mainphoto.png" alt="" class="mainphoto">
-        <img src="images/linux.png" alt="" class="linux smallimg">
-        <img src="images/windows.png" alt="" class="microsoft smallimg">
-        <img src="images/azure.png" alt="" class="azure smallimg">
       </div>
      </div>
      <div class="moreInfo notVisible">
       <img src="images/arrowDown.png" alt="arrowDown">
     </div>
   </header>
-  <main>
-    
+  <main class="blurWhenMessegeActive">
+    <div class="content-container">
+      <div class="text">
+        <div class="title">
+          <p>Poznaj mnie.</p>
+        </div>
+        <div class="content">
+          <p>
+            Jestem 21-letnim studentem informatyki na Polsko-Japońskiej-Akademi-Technik-Komputerowych w Gdańsku.  
+            Aktualnie Administrator Systemów Informatycznych w firmie Allcon, uprzednio Junior Penetration Tester w Sectest.IT.
+          </p>
+        </div>
+      </div>
+      <div class="images">
+        <img src="images/linux.png" alt="">
+        <img src="images/windows.png" alt="">
+        <img src="images/azure.png" alt="">
+      </div>
+    </div>
   </main>
 </body>
+<script src="scripts/typeAnimation.js" defer></script>
+<script src="scripts/messegeDialogWindow.js" defer></script>
 </html>
