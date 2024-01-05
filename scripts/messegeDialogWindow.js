@@ -14,16 +14,16 @@ const showForm = () => {
   const messageBody = `
     <div class="messageInfo hide">
       <div class="closeButton">
-        <img src="/images/close.png" alt="closeButton">
+        <img src="images/close.png" alt="closeButton">
       </div>
       <p class='mail'>lukasz.aleksandrowicz@allcon.pl</p>
       <div class="images">
         <a href="#">
-          <img src="/images/linkedin.png" alt="linkedin">
+          <img src="images/linkedin.png" alt="linkedin">
           <p>linkedin</p>
         </a>
         <a href="#">
-          <img src="/images/github.png" alt="github">
+          <img src="images/github.png" alt="github">
           <p>github</p>
         </a>
       </div>
