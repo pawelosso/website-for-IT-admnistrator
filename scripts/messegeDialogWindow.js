@@ -3,7 +3,7 @@ const buttonToOpen = document.querySelector('.messageButton');
 const hideForm = () => {
   document.querySelector('.messageInfo').classList.add('hide');
   document.querySelector('.messageInfo-container').classList.add('hide');
-  document.querySelector('.messageInfo-container').addEventListener('transitionend', ()=>{
+  document.querySelector('.messageInfo').addEventListener('transitionend', ()=>{
     document.querySelectorAll('.blurWhenMessegeActive').forEach(element => element.classList.remove('blur'))
     document.querySelector('.messageInfo-container').remove();
     buttonToOpen.classList.remove('hide');

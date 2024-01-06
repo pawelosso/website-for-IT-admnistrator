@@ -5,6 +5,11 @@
   to{opacity: 1;}
 }
 
+@keyframes arrowDown{
+  from{transform: translateY(-5px)}
+  to{transform: translateY(5px)}
+}
+
 @keyframes typingAnimation {
   0%   {opacity: 1}
   10%  {opacity: 1}
@@ -117,14 +122,6 @@ header .content-container .images-container .mainphoto {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-}
-
-header .content-container .images-container .smallimg {
-  position: absolute;
-  z-index: 2;
-  width: 13vmin;
-  min-width: 40px;
-  max-width: 60px;
 }
 
 .messageButton-container {
@@ -254,6 +251,7 @@ header .moreInfo {
 
 header .moreInfo img {
   width: 25px;
+  animation: arrowDown 1s alternate infinite;
 }
 
 main {
