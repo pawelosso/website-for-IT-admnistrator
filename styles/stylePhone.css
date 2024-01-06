@@ -19,13 +19,13 @@
 }
 
 @keyframes linuxAnimation {
-  from{transform: translateY(-5px)}
-  to{transform: translateY(5px)}
+  from{transform: translateX(-5px)}
+  to{transform: translateX(5px)}
 }
 
 @keyframes windowsAnimation {
-  from{transform: translate(-50%, 5px)}
-  to{transform: translate(-50%, -5px)}
+  from{transform: translateX(5px)}
+  to{transform: translateX(-5px)}
 }
 
 *{
@@ -125,25 +125,6 @@ header .content-container .images-container .smallimg {
   width: 13vmin;
   min-width: 40px;
   max-width: 60px;
-}
-
-.linux {
-  left: -15px;
-  bottom: 25px;
-  animation: linuxAnimation 1.5s alternate infinite;
-}
-
-.microsoft {
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: windowsAnimation 1.5s alternate infinite;
-}
-
-.azure{
-  right: -15px;
-  bottom: 25px;
-  animation: linuxAnimation 1.5s alternate infinite;
 }
 
 .messageButton-container {
@@ -278,7 +259,7 @@ header .moreInfo img {
 main {
   min-height: 100vh;
   background-color: #E0E0E0;
-  padding: 20px 20px 20px 20px;
+  padding: 70px 20px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -294,7 +275,7 @@ main .content-container {
 }
 
 main .content-container .text {
-  max-width: 590px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -307,6 +288,14 @@ main .content-container .text .title {
 
 main .content-container .text .content {
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+main .content-container .text .content .secondP {
+  font-weight: 700;
+  font-size: 17px;
 }
 
 main .content-container .images {
@@ -314,6 +303,18 @@ main .content-container .images {
   flex-direction: column;
   row-gap: 20px;
   align-items: center;
+}
+
+main .content-container .images .linux {
+  animation: linuxAnimation 1.5s alternate infinite;
+}
+
+.windows {
+  animation: windowsAnimation 1.5s alternate infinite;
+}
+
+.azure{
+  animation: linuxAnimation 1.5s alternate infinite;
 }
 
 main .content-container .images img {
@@ -356,15 +357,38 @@ main .content-container .images img {
   header {
     min-height: 400px;
   }
+
+  main{
+    padding: 20px;
+  }
   
   header .content-container {
     flex-direction: row;
     column-gap: 10%;
   }
 
+  main .content-container {
+    flex-direction: row;
+    column-gap: 10%;
+    align-items: flex-start;
+  }
+
+  main .content-container .text .content {
+    font-size: 20px;
+  }
+
+  main .content-container .text .content .secondP {
+    font-size: 25px;
+  }
+
+  main .content-container .images img {
+    max-width: 220px;
+  }
+
   .messageInfo-container{
     align-items: flex-end;
   }
+
 }
 
 @media (min-width: 1200px) {
@@ -380,8 +404,19 @@ main .content-container .images img {
     font-size: 23px;
   }
 
+  main .content-container .text {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   main .content-container .text .title {
-    font-size: 70px;
+    font-size: 60px;
+  }
+
+  main .content-container .images img {
+    max-width: 270px;
   }
 }
 
