@@ -246,7 +246,21 @@ header .moreInfo {
   border-radius: 50%;
   border: 3px solid #4e2dd2;
   justify-content: center;
-  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 20px 2px rgba(66, 68, 90, 1);
+}
+
+header .moreInfo::before {
+  position: absolute;
+  content: 'dowiedz się więcej';
+  white-space: nowrap;
+  top: -35px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4e2dd2;
 }
 
 header .moreInfo img {
@@ -318,6 +332,11 @@ main .content-container .images .linux {
 main .content-container .images img {
   width: 75vmin;
   max-width: 310px;
+}
+
+footer {
+  background-color: #4e2dd263;
+  padding: 10px;
 }
 
 @media (min-width: 450px) {
@@ -440,3 +459,10 @@ main .content-container .images img {
     max-width: 75px;
   }
 }
+
+@media (min-height: 700px){
+  header .moreInfo {
+    top: 9%;
+  }
+}
+
