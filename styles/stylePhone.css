@@ -137,6 +137,46 @@ header .content-container .images-container .mainphoto {
   overflow: hidden;
 }
 
+.arrowUp {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 20px;
+  top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 4;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.arrowUp:hover{
+  background-color: #e1e1e1;
+}
+
+.arrowUp.showWhenScroll{
+  opacity: 1;
+  transition: opacity .4s;
+}
+
+.arrowUp.hide{
+  opacity: 0;
+  z-index: 3;
+}
+
+.arrowUp img {
+  width: 25px;
+  rotate: 180deg;
+}
+
+.messageButton-container .arrowUp img{
+  width: 40px;
+}
+
 .messageButton-container .messageButton {
   font-weight: 700;
   background: white;
@@ -173,7 +213,7 @@ header .content-container .images-container .mainphoto {
 
 .messageInfo-container .messageInfo {
   position: relative;
-background-color: white;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,7 +278,6 @@ background-color: white;
 }
 
 header .moreInfo {
-  transition: transform 2s, opacity 2s;
   min-width: 50px;
   min-height: 50px;
   display: flex;
@@ -248,9 +287,6 @@ header .moreInfo {
   justify-content: center;
   position: relative;
   cursor: pointer;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 20px 2px rgba(66, 68, 90, 1);
 }
 
 header .moreInfo::before {
@@ -263,6 +299,10 @@ header .moreInfo::before {
   color: #4e2dd2;
 }
 
+header .moreInfo:hover{
+  background-color: #e1e1e1;
+}
+
 header .moreInfo img {
   width: 25px;
   animation: arrowDown 1s alternate infinite;
@@ -271,7 +311,7 @@ header .moreInfo img {
 main {
   min-height: 100vh;
   background-color: #E0E0E0;
-  padding: 70px 20px 20px 20px;
+  padding: 90px 20px 20px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,6 +422,10 @@ footer {
   header .content-container {
     flex-direction: row;
     column-gap: 10%;
+  }
+
+  header .moreInfo::before {
+    font-size: 15px;
   }
 
   main .content-container {

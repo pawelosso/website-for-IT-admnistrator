@@ -7,6 +7,7 @@ const hideForm = () => {
     document.querySelectorAll('.blurWhenMessegeActive').forEach(element => element.classList.remove('blur'))
     document.querySelector('.messageInfo-container').remove();
     buttonToOpen.classList.remove('hide');
+    document.querySelector('.arrowUp').classList.remove('hide');
   })
 }
 
@@ -30,6 +31,8 @@ const showForm = () => {
     </div>`;
 
   buttonToOpen.classList.add('hide');
+  document.querySelector('.arrowUp').classList.add('hide');
+  
   let isTransitionEndHandled = false;
 
   buttonToOpen.addEventListener('transitionend', event => {
