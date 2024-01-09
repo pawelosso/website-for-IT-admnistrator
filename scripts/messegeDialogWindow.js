@@ -19,13 +19,9 @@ const showForm = () => {
       </div>
       <p class='mail'>lukasz.aleksandrowicz@allcon.pl</p>
       <div class="images">
-        <a href="#">
+        <a href="https://www.linkedin.com/in/%C5%82ukasz-aleksandrowicz-08926b245/">
           <img src="images/linkedin.png" alt="linkedin">
           <p>linkedin</p>
-        </a>
-        <a href="#">
-          <img src="images/github.png" alt="github">
-          <p>github</p>
         </a>
       </div>
     </div>`;
