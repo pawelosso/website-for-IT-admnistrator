@@ -2,7 +2,7 @@
 This is webside for my indyvidual client - IT Systems Admnistrator. This site is one page type with interesting tech design.
 I added to project some animations and simple, comportable flow.
 <br>
-### Go live: https://pawelosso.github.io/Website-for-IT-Admnistrator/
+### Go live: https://pawelosso.github.io/website-for-IT-admnistrator/
 
 <strong>In this project I used:</strong>
 <br><br>
